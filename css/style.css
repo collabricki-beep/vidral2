@@ -88,12 +88,25 @@ background-image: url(../img/background/SINGLE-bg.jpg);
 
 
 /* 1.2. services IMG BACKGROUND */
-.services-bg-1 {
-background-image: url(../img/services/services-bg-1.jpg);
-}
+
+
 .services-bg-2 {
 background-image: url(../img/services/services-bg-2.jpg);
 }
+.services-bg-3 {
+background-image: url(../img/services/services-bg-3.jpg);
+}
+.services-bg-4 {
+background-image: url(../img/services/services-bg-4.jpg);
+}
+.services-bg-5 {
+background-image: url(../img/services/services-bg-5.jpg);
+}
+.services-bg-6 {
+background-image: url(../img/services/services-bg-6.jpg);
+}
+
+
 
 
 /* 1.3. launch IMG BACKGROUND */
@@ -135,6 +148,22 @@ background-image: url(../img/background/hero-bg-3.jpg);
 
 .bg-img-4 {
 background-image: url(../img/background/hero-bg-4.jpg);
+}
+
+
+.logo-sito {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 800px;
+height: 200px;
+background-image: url(../img/background/prova.png);
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+text-indent: -9999px;
+overflow: hidden;
+white-space: nowrap;
 }
 
 
@@ -2094,7 +2123,12 @@ color: #2e2e2e;
 }
 
 .services-bg-1,
-.services-bg-2 {
+.services-bg-2,
+.services-bg-3,
+.services-bg-4,
+.services-bg-5,
+.services-bg-6{
+
 width: 100%;
 height: auto;
 background-position: center center;
@@ -2114,7 +2148,12 @@ background-repeat: no-repeat;
 }
 
 .halves:hover .services-bg-1,
-.halves:hover .services-bg-2 {
+.halves:hover .services-bg-2,
+.halves:hover .services-bg-3,
+.halves:hover .services-bg-4,
+.halves:hover .services-bg-5,
+.halves:hover .services-bg-6 {
+
 -webkit-filter: none;
         filter: none;
 -webkit-transition: all 1s ease;
@@ -3984,3 +4023,83 @@ height: 100px;
     height: 80px;
   }
 }
+
+
+
+
+.video-bg {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 1;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* intensità overlay */
+    z-index: 2;
+}
+
+/* Mantiene il testo sopra il video */
+.center-container,
+.social-icons-wrapper,
+.scroll-indicator-wrapper,
+.copyright-home {
+    position: relative;
+    z-index: 3;
+}
+
+
+
+
+
+
+
+
+/* Forza le colonne ad avere stessa altezza */
+.halves {
+    display: flex;
+    align-items: stretch;
+}
+
+.halves .half {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* BLOCCO VIDEO */
+.video-half {
+    position: relative;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* VIDEO */
+.video-half video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
