@@ -3979,10 +3979,12 @@ height: 100px;
   }
 }
 
+
 @media only screen and (max-width: 980px) {
-  .inner-divider {
-    height: 100px;
-  }
+  .video-half, .video-bg {
+    min-height: 300px;
+    height: auto;
+  }  
 }
 
 @media only screen and (max-width: 640px) {
@@ -4030,7 +4032,7 @@ height: 100px;
 .video-bg {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 120%;
     overflow: hidden;
 }
 
