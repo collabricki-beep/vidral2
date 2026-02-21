@@ -3980,12 +3980,25 @@ height: 100px;
 }
 
 
+/* 1. Forza l'altezza del contenitore su mobile */
 @media only screen and (max-width: 980px) {
   .video-half, .video-bg {
-    min-height: 300px;
-    height: auto;
+    min-height: 100vh !important; /* Usa 100vh per coprire tutto lo schermo */
+    height: 100vh !important;
+    display: block !important;
   }  
 }
+
+/* 3. Sistema il logo per il mobile (evita che spacchi il layout) */
+@media only screen and (max-width: 767px) {
+    .logo-sito {
+        width: 100% !important;
+        max-width: 300px; /* Ridimensiona il logo su smartphone */
+        height: 100px;
+        margin: 0 auto;
+    }
+}
+
 
 @media only screen and (max-width: 640px) {
   .inner-divider {
@@ -4036,17 +4049,16 @@ height: 100px;
     overflow: hidden;
 }
 
+/* 2. Assicurati che il video sia visibile e non ritagliato male */
 .bg-video {
     position: absolute;
     top: 50%;
     left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100%;
     object-fit: cover;
-    z-index: 1;
+    transform: translate(-50%, -50%);
+    z-index: 0; /* Portalo dietro a tutto */
 }
 
 .video-overlay {
@@ -4103,5 +4115,37 @@ height: 100px;
     object-fit: cover;
     display: block;
 }
+
+/* Correzione per il secondo video su mobile */
+.video-container-secondario {
+    position: relative;
+    width: 100%;
+   
+    min-height: 300px; /* Altezza minima per non farlo sparire */
+    overflow: hidden;
+    display: block !important; /* Forza la visibilità */
+}
+
+.video-secondario {
+    width: 100%;
+    height: auto;
+    display: block !important;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 767px) {
+    .video-container-secondario {
+        min-height: 250px; /* Regola l'altezza per smartphone */
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
