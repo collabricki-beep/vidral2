@@ -1707,15 +1707,41 @@ input:focus.subscribeemail::-webkit-input-placeholder { color: transparent; }
           input:focus.subscribeemail:-moz-placeholder { color: transparent; }
 
 
+
+
 /* 19. social icons */
 .social-icons-wrapper {
-position: absolute;
-bottom: 48px;
-left: 45px;
-text-align: left;
-margin: 0;
-z-index: 10;
+    position: absolute;
+    bottom: 80px; /* Leggermente regolato */
+    left: 45px;
+    text-align: left;
+    margin: 0;
+    z-index: 10;
 }
+
+/* Ingrandimento e Gradiente Instagram */
+.social-icons-wrapper .social-icon a {
+    font-size: 30px; /* Molto più visibile */
+    display: inline-block;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text; /* Applica il colore solo al testo/icona */
+    -webkit-text-fill-color: transparent; /* Rende trasparente il colore base per far vedere il gradiente */
+    transition: transform 0.3s ease;
+    filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.3)); /* Ombra per farla risaltare sul video */
+}
+
+/* Effetto al passaggio del mouse */
+.social-icons-wrapper .social-icon a:hover {
+    transform: scale(1.2) rotate(5deg); /* Si ingrandisce e ruota leggermente */
+}
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 640px) {
   .social-icons-wrapper { 
@@ -4144,8 +4170,126 @@ height: 100px;
 
 
 
+.pajno-footer {
+  background-color: #111111; /* Sfondo quasi nero */
+  color: #ffffff;
+  padding: 80px 10% 40px;
+    line-height: 1.6;
+    font-family: 'Oswald', sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+}
+
+.gold-title {
+  color: #696969; 
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;   /* Aumenta lo spazio tra le lettere */
+text-align: left;      /* Allinea il testo a sinistra */
+  line-height: 1.6;      /* Imposta l'interlinea (consigliato tra 1.4 e 1.8) */
+}
+
+.footer-col p {
+  font-family: 'Raleway', sans-serif;
+font-size: 13px;
+line-height: 1.5;
+font-style: normal;
+font-weight: 400;
+   text-align: left;      /* Allinea il testo a sinistra */
+  line-height: 1.6;      /* Imposta l'interlinea (consigliato tra 1.4 e 1.8) */
+  color: #e0e0e0;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col a {
+font-family: 'Raleway', sans-serif;
+font-size: 13px;
+line-height: 1.5;
+font-style: normal;
+font-weight: 400;
+   text-align: left;      /* Allinea il testo a sinistra */
+  line-height: 1.6;      /* Imposta l'interlinea (consigliato tra 1.4 e 1.8) */
+  color: #e0e0e0;
+}
 
 
+
+.footer-col a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.footer-col a:hover {
+  color: #005EA7;
+}
+
+/* Linea di separazione sottile */
+.footer-divider {
+  border-top: 1px solid #333;
+  margin: 60px 0 40px;
+}
+
+.footer-bottom {
+  text-align: center;
+}
+
+.footer-logo img {
+  width: 150px; /* Regola in base al tuo logo */
+  margin-bottom: 10px;
+}
+
+.footer-logo h2 {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.copyright {
+  color: #FFD700;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.2rem;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.social-icons a:hover {
+  opacity: 0.7;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    text-align: left;
+  }
+}
 
 
 
