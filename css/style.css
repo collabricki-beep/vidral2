@@ -1707,15 +1707,41 @@ input:focus.subscribeemail::-webkit-input-placeholder { color: transparent; }
           input:focus.subscribeemail:-moz-placeholder { color: transparent; }
 
 
+
+
 /* 19. social icons */
 .social-icons-wrapper {
-position: absolute;
-bottom: 48px;
-left: 45px;
-text-align: left;
-margin: 0;
-z-index: 10;
+    position: absolute;
+    bottom: 80px; /* Leggermente regolato */
+    left: 45px;
+    text-align: left;
+    margin: 0;
+    z-index: 10;
 }
+
+/* Ingrandimento e Gradiente Instagram */
+.social-icons-wrapper .social-icon a {
+    font-size: 30px; /* Molto più visibile */
+    display: inline-block;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text; /* Applica il colore solo al testo/icona */
+    -webkit-text-fill-color: transparent; /* Rende trasparente il colore base per far vedere il gradiente */
+    transition: transform 0.3s ease;
+    filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.3)); /* Ombra per farla risaltare sul video */
+}
+
+/* Effetto al passaggio del mouse */
+.social-icons-wrapper .social-icon a:hover {
+    transform: scale(1.2) rotate(5deg); /* Si ingrandisce e ruota leggermente */
+}
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 640px) {
   .social-icons-wrapper { 
@@ -4144,7 +4170,180 @@ height: 100px;
 
 
 
+<style>
+    /* Footer Style */
+    .vidral-footer {
+        background-color: #000; /* Sfondo nero come il tuo tema */
+        color: #fff;
+        padding: 40px 0;
+        font-family: 'Raleway', sans-serif;
+        border-top: 1px solid #222;
+    }
 
+    .footer-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* Sinistra: Mail e Social */
+    .footer-left {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-left a {
+        color: #fff;
+        text-decoration: none;
+        transition: opacity 0.3s;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+
+    .footer-socials {
+        margin-top: 5px;
+        font-size: 20px;
+        display: flex;
+        gap: 15px;
+    }
+
+    /* Destra: Copyright e P.IVA */
+    .footer-right {
+        text-align: right;
+        font-weight: 300;
+        line-height: 1.8;
+        letter-spacing: 1px;
+    }
+
+    .footer-right p {
+        margin: 0;
+        font-size: 12px;
+        color: #888;
+    }
+
+    .footer-left a:hover {
+        opacity: 0.7;
+        color: #fff;
+    }
+
+    /* Responsive per Mobile */
+    @media (max-width: 768px) {
+        .footer-flex {
+            flex-direction: column;
+            text-align: center;
+            gap: 30px;
+        }
+        .footer-right {
+            text-align: center;
+        }
+        .footer-socials {
+            justify-content: center;
+        }
+    }
+</style>
+
+
+
+/* 1. RESET FONDAMENTALE (Copia questo per primo!) */
+.main-footer, .main-footer * {
+    box-sizing: border-box; /* Impedisce al padding di allargare i div */
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 2. STRUTTURA ESTERNA */
+.main-footer {
+    background-color: #111; /* Nero profondo */
+    color: #eee;
+    padding: 60px 20px;
+    border-top: 2px solid #333;
+    width: 100%;
+}
+
+/* 3. LA GRIGLIA (Qui si raddrizza tutto) */
+.footer-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Due colonne identiche */
+    gap: 40px; /* Spazio preciso tra le due colonne */
+    align-items: center;
+}
+
+/* 4. STILE ELEMENTI SINISTRA */
+.footer-label {
+    display: block;
+    font-weight: 800;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #888;
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: 300;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.footer-link:hover {
+    border-bottom: 1px solid #fff;
+}
+
+.social-icons {
+    margin-top: 50px;
+}
+
+.social-icons a {
+    color: #fff;
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+/* 5. STILE ELEMENTI DESTRA (Allineati a destra) */
+.legal {
+    text-align: right;
+    line-height: 1.6;
+}
+
+.legal p {
+    font-size: 2rem;
+    color: #aaa;
+}
+
+.policy-links {
+    margin-top: 10px;
+}
+
+.policy-links a {
+    font-size: 1.5rem;
+    color: #666;
+    text-decoration: none;
+}
+
+/* 6. RESPONSIVE (Per il cellulare) */
+@media (max-width: 600px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* Una colonna sola sul telefono */
+        text-align: center;
+    }
+    .legal {
+        text-align: center;
+        border-top: 1px solid #333;
+        padding-top: 30px;
+    }
+}
 
 
 
